@@ -828,6 +828,7 @@ def main():
     <div style='text-align: center; color: #666; padding: 2rem 0;'>
         <p>🚀 <strong>JobFit-AI</strong> - Powered by Google Gemini AI</p>
         <p>Made with ❤️ to help you land your dream job</p>
+        <p>Made by Ashutosh Kumar Yadav</p>
     </div>
     """, unsafe_allow_html=True)
 
