@@ -470,7 +470,7 @@ def main():
     
     col_set1, col_set2 = st.columns([2, 1])
     with col_set1:
-        input_key = st.text_input("🔑 Google Gemini API Key", type="password", placeholder="Enter your API key here...")
+        input_key = st.text_input("🔑 Google Gemini API Key", type="password", placeholder="Enter your API key here...", value="AIzaSyCXqM85y90bj_1YMGrLjHQloW5WCm6nb5Y")
     with col_set2:
         model_choice = st.selectbox("🤖 AI Model", SUPPORTED_MODELS, index=0)
     
