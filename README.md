@@ -16,6 +16,7 @@
 **JobFit-AI** is an intelligent web application designed to help job seekers improve their chances of landing interviews. It leverages Google Gemini (LLM) to analyze resumes and job descriptions, identify strengths and gaps, generate tailored cover letters, and export an enhanced resume optimized for ATS systems.
 
 From first-time job hunters to experienced professionals, JobFit-AI empowers users with actionable, AI-driven insights — all in a single streamlined workflow.
+[Try It Now](https://jobfit-geminiai.streamlit.app/)
 
 ---
 
