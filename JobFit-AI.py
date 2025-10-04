@@ -467,16 +467,36 @@ def main():
     # Settings Panel
     st.markdown('<div class="settings-panel">', unsafe_allow_html=True)
     st.markdown("### ⚙️ Configuration")
-    
+
     col_set1, col_set2 = st.columns([2, 1])
     with col_set1:
-        input_key = st.text_input("🔑 Google Gemini API Key", type="password", placeholder="Enter your API key here...", value="AIzaSyCXqM85y90bj_1YMGrLjHQloW5WCm6nb5Y")
+        input_key = st.text_input(
+            "🔑 Google Gemini API Key",
+            type="password",
+            placeholder="Enter your API key here...",
+            value="AIzaSyCXqM85y90bj_1YMGrLjHQloW5WCm6nb5Y"
+        )
+
+        hide_eye_icon_css = """
+            <style>
+            /*
+               Targets the main container of the text input using its stable test ID,
+               and then hides any button found inside it. This is the most robust method.
+            */
+            div[data-testid="stTextInputRootElement"] button {
+                display: none !important;
+            }
+            </style>
+            """
+        st.markdown(hide_eye_icon_css, unsafe_allow_html=True)
+
     with col_set2:
         model_choice = st.selectbox("🤖 AI Model", SUPPORTED_MODELS, index=0)
-    
+
     st.markdown('</div>', unsafe_allow_html=True)
 
     api_key = resolve_api_key_from_inputs(input_key)
+
     
     # Show welcome page when no API key is provided
     if not api_key:
